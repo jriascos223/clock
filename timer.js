@@ -1,6 +1,6 @@
 var delay = 1000;
-var x = document.getElementById("input").value;
-// x = 11
+// var x = document.getElementById("input").value;
+x = 11
 console.log(x);
 
 function start() {
@@ -15,6 +15,8 @@ function timer() {
     document.getElementById('input').value = x;
     if (x==0) {
       clearInterval(myVar);
+      var audio = new Audio('sounds/alarm.mp3');
+      audio.play();
       var btn = document.getElementById("button"); btn.disabled = false;
     }
 }
