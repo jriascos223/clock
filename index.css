@@ -5,3 +5,14 @@
   font-size: 30px;
   text-align: center;
 }
+
+#time {
+  height:20px;
+  width:150px;
+  text-align:center;
+  background-color:grey;
+  color:white;
+  margin-left:50%;
+  transform:translate(-50%);
+  margin-top:5px;
+}
