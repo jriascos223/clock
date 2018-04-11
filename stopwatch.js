@@ -1,12 +1,21 @@
+var time1 = 0;
+var time2 = 0;
+var time3 = 0;
+var time4 = 0;
+var time5 = 0;
+var time6 = 0;
+var togle = "true";
 function start(){
+  if (togle === "true") {
+    var myVar = setInterval(stopwatch, 1000);
+    togle = "false";
+    console.log('test');
+  }else{
+    clearInterval(myVar);
+    togle = "true";
+    console.log('test2');
+  }
 
-  var time1 = 0;
-  var time2 = 0;
-  var time3 = 0;
-  var time4 = 0;
-  var time5 = 0;
-  var time6 = 0;
-  var myVar = setInterval(stopwatch, 1000);
 
 
   function stopwatch(){
