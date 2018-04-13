@@ -42,8 +42,9 @@ function start(){
         }
       }
     }
-    document.getElementById('stopwatch').innerHTML = time5 + ":" + time4 + time3 +":" + time2 + time1;
+    display(time1,time2,time3,time4,time5);document.getElementById('stopwatch').innerHTML = time5 + ":" + time4 + time3 +":" + time2 + time1;
   }
-
-
+  function display(time1,time2,time3,time4,time5){
+  document.getElementById('stopwatch').innerHTML = time5 + ":" + time4 + time3 +":" + time2 + time1;
+  }
 }
