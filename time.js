@@ -1,4 +1,5 @@
-var timeout;
+var timeouts = [];
+var currentZone;
 window.onload = function calcTime() {
   //in order to get location we will make an ajax request
   //hope to soon include the ability to get correct time (not system time) from a remote server
@@ -18,9 +19,23 @@ window.onload = function calcTime() {
 };
 
 function displayTime(diff, clear) {
-  timeout = setTimeout(function getTime() {
+  timeouts.push(setTimeout(function getTime() {
     if (clear == true) {
-      clearTimeout(timeout);
+      //literally searches all timeouts in the file and exterminates them
+    //ended up finding this online cause I just couldn't clear the timeouts I had
+    let id = window.setTimeout(() => {}, 0);
+    console.log(id);
+    while (id) {
+      window.clearTimeout(id);
+      id--;
+    }
+
+    id = window.setInterval(() => {}, 0);
+    console.log(id);
+    while (id) {
+      window.clearInterval(id);
+      id--;
+    }
     }
     if (diff == undefined) {
       var hour = new Date().getHours();
@@ -49,6 +64,7 @@ function displayTime(diff, clear) {
       var minutes = new Date().getUTCMinutes();
       var seconds = new Date().getUTCSeconds();
       var outputHour = hour + diff;
+      var relativeNoon = "AM";
       if (outputHour > 12) {
         outputHour = outputHour -  12;
         relativeNoon = "PM";
@@ -70,5 +86,5 @@ function displayTime(diff, clear) {
       setTimeout(getTime, 10);
     }
 
-  }, 10);
+  }, 10));
 }
