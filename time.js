@@ -19,8 +19,7 @@ window.onload = function calcTime() {
 };
 
 function displayTime(diff, clear) {
-  timeouts.push(setTimeout(function getTime() {
-    if (clear == true) {
+  if (clear == true) {
       //literally searches all timeouts in the file and exterminates them
     //ended up finding this online cause I just couldn't clear the timeouts I had
     let id = window.setTimeout(() => {}, 0);
@@ -37,7 +36,9 @@ function displayTime(diff, clear) {
       id--;
     }
     }
+  timeouts.push(setTimeout(function getTime() {
     if (diff == undefined) {
+      
       var hour = new Date().getHours();
       var minutes = new Date().getMinutes();
       var seconds = new Date().getSeconds();
@@ -82,6 +83,7 @@ function displayTime(diff, clear) {
       if (minutes.toString().length == 1) {
         minutes = "0" + minutes.toString();
       }
+    
       document.getElementById("time").innerHTML = outputHour + ":" + minutes + ":" + seconds + " " + relativeNoon;
       setTimeout(getTime, 10);
     }
