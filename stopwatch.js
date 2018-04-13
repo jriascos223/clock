@@ -20,31 +20,42 @@ function start(){
 
   function stopwatch(){
     time1 += 1;
-    if (time1 >= 10) {
-      time1 = 0;
-      time2 += 1;
-      if (time2 >= 6) {
+    clock();
+    display(time1,time2,time3,time4,time5);document.getElementById('stopwatch').innerHTML = time5 + ":" + time4 + time3 +":" + time2 + time1;
+
+
+    function clock(){
+      if (time1 >= 10) {
         time1 = 0;
-        time2 = 0;
-        time3 += 1;
-        if (time3 >= 10) {
+        time2 += 1;
+        if (time2 >= 6) {
           time1 = 0;
           time2 = 0;
-          time3 = 0;
-          time4 += 1;
-          if (time4 >= 6) {
+          time3 += 1;
+          if (time3 >= 10) {
             time1 = 0;
             time2 = 0;
             time3 = 0;
-            time4 = 0;
-            time5 +=1;
+            time4 += 1;
+            if (time4 >= 6) {
+              time1 = 0;
+              time2 = 0;
+              time3 = 0;
+              time4 = 0;
+              time5 +=1;
+            }
           }
         }
       }
     }
-    display(time1,time2,time3,time4,time5);document.getElementById('stopwatch').innerHTML = time5 + ":" + time4 + time3 +":" + time2 + time1;
   }
+
   function display(time1,time2,time3,time4,time5){
   document.getElementById('stopwatch').innerHTML = time5 + ":" + time4 + time3 +":" + time2 + time1;
   }
+
+
+
+
+
 }
