@@ -17,14 +17,9 @@ window.onload = function calcTime() {
   
 };
 
-
-
-
-
-
-function displayTime(diff) {
+function displayTime(diff, clear) {
   timeout = setTimeout(function getTime() {
-    if (diff != undefined) {
+    if (clear == true) {
       clearTimeout(timeout);
     }
     if (diff == undefined) {
@@ -56,6 +51,10 @@ function displayTime(diff) {
       var outputHour = hour + diff;
       if (outputHour > 12) {
         outputHour = outputHour -  12;
+        relativeNoon = "PM";
+      }
+      if (outputHour < 0) {
+        outputHour += 12;
         relativeNoon = "PM";
       }
       if (outputHour == 0) {
