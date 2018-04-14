@@ -10,7 +10,6 @@ window.onload = function calcTime() {
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
       var response = JSON.parse(xhr.responseText);
-      document.getElementById('location').innerHTML = "Your location is " + response.city + ", " + response.region + " in the " + response.country + ".";
       document.getElementById('message').innerHTML = "The current time in " + response.city + ", " + response.region + " in the " + response.country + " is...";
     }
   };
@@ -18,7 +17,8 @@ window.onload = function calcTime() {
   
 };
 
-function displayTime(diff, clear) {
+function displayTime(diff, clear, location) {
+  document.getElementById('message').innerHTML = "The current time in " + location + " is...";
   if (clear == true) {
       //literally searches all timeouts in the file and exterminates them
     //ended up finding this online cause I just couldn't clear the timeouts I had
