@@ -6,21 +6,23 @@ var x = 30;
 
 function start() {
   var audio = new Audio('sounds/alarm.mp3');
-  var btn = document.getElementById("button"); btn.disabled = true;
+  var btn = document.getElementById("button");
+  btn.disabled = true;
   x = +prompt('Enter time amout');
   document.getElementById('timer').innerHTML = x;
   var myVar = setInterval(timer, 1000);
 
 
-function timer() {
+  function timer() {
 
-    x = x-1;
+    x = x - 1;
     document.getElementById('timer').innerHTML = x;
-    if (x==0) {
+    if (x == 0) {
       clearInterval(myVar);
       audio.play();
-      var btn = document.getElementById("button"); btn.disabled = false;
+      var btn = document.getElementById("button");
+      btn.disabled = false;
     }
-}
+  }
 
 }

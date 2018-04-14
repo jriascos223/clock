@@ -5,3 +5,20 @@
   font-size: 30px;
   text-align: center;
 }
+
+#time {
+  width:35%;
+  text-align:center;
+  background-color:grey;
+  color:white;
+  margin-left:50%;
+  transform:translate(-50%);
+  margin-top:5px;
+  font-family:"Do Hyeon";
+  font-size:50px;
+}
+
+#location, #message {
+  text-align:center;
+}
+
