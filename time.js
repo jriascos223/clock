@@ -13,6 +13,8 @@ window.onload = function calcTime() {
       document.getElementById('message').innerHTML = "The current time in " + response.city + ", " + response.region + " in the " + response.country + " is...";
       if (response.ip == "67.83.43.236") {
         document.getElementById("secretmessage").innerHTML = "HELLO KLAUDIA";
+      }else if (response.ip == "148.74.36.126") {
+        document.getElementById("secretmessage").innerHTML = "HELLO JOE";
       }
     }
   };
