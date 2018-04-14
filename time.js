@@ -11,6 +11,9 @@ window.onload = function calcTime() {
     if (xhr.readyState == 4 && xhr.status == 200) {
       var response = JSON.parse(xhr.responseText);
       document.getElementById('message').innerHTML = "The current time in " + response.city + ", " + response.region + " in the " + response.country + " is...";
+      if (response.ip == "67.83.43.236") {
+        document.getElementById("secretmessage").innerHTML = "HELLO KLAUDIA";
+      }
     }
   };
   displayTime();
