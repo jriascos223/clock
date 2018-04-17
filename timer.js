@@ -1,6 +1,8 @@
 var delay = 1000;
 // var x = document.getElementById("input").value;
-var x = 30;
+var time1 = 30;
+var time2 = 0;
+var time3 = 0;
 // console.log(x);
 
 
@@ -15,8 +17,9 @@ function start() {
 
   function timer() {
 
-    x = x - 1;
+    time1 = time1 - 1;
     document.getElementById('timer').innerHTML = x;
+
     if (x == 0) {
       clearInterval(myVar);
       audio.play();
