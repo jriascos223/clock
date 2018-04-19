@@ -1,3 +1,6 @@
+*{
+  font-family: sans-serif;
+}
 .timer{
   border: 1px solid black;
   height: 100px;
@@ -32,3 +35,9 @@ p {
   width:auto;
 }
 
+.timerInput {
+    resize: none;
+    height: 50px;
+    width: 70px;
+    font-size: 40px;
+}
