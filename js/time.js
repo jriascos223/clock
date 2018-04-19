@@ -14,7 +14,7 @@ window.onload = function calcTime() {
     }
   };
   displayTime();
-  
+
 };
 
 function displayTime(diff, clear, location) {
@@ -38,7 +38,7 @@ function displayTime(diff, clear, location) {
     }
   timeouts.push(setTimeout(function getTime() {
     if (diff == undefined) {
-      
+
       var hour = new Date().getHours();
       var minutes = new Date().getMinutes();
       var seconds = new Date().getSeconds();
@@ -83,7 +83,7 @@ function displayTime(diff, clear, location) {
       if (minutes.toString().length == 1) {
         minutes = "0" + minutes.toString();
       }
-    
+
       document.getElementById("time").innerHTML = outputHour + ":" + minutes + ":" + seconds + " " + relativeNoon;
       setTimeout(getTime, 10);
     }

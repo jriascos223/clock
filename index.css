@@ -32,3 +32,16 @@ p {
   width:auto;
 }
 
+#hours {
+  width:50px;
+  height:40px;
+  background-color:grey;
+  /*for visibility and it's only temporary*/
+  color:white;
+  margin-left:50%;
+  transform:translate(-50%);
+  font-size:40px;
+  text-align:center;
+  outline:none;
+  padding-bottom:2px;
+}
