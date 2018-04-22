@@ -6,8 +6,8 @@ var time5 = 0;
 var time6 = 0;
 var togle = "true";
 function start(){
+  var myVar = setInterval(stopwatch, 1000);
   if (togle === "true") {
-    var myVar = setInterval(stopwatch, 1000);
     togle = "false";
     console.log('test');
   }else{
@@ -19,7 +19,11 @@ function start(){
 
 
   function stopwatch(){
+
     time1 += 1;
+    if (time1 === 30) {
+    clearInterval(myVar);
+    }
     clock();
     display(time1,time2,time3,time4,time5);document.getElementById('stopwatch').innerHTML = time5 + ":" + time4 + time3 +":" + time2 + time1;
 
@@ -49,6 +53,7 @@ function start(){
       }
     }
   }
+
 
   function display(time1,time2,time3,time4,time5){
   document.getElementById('stopwatch').innerHTML = time5 + ":" + time4 + time3 +":" + time2 + time1;
