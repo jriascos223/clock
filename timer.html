@@ -12,12 +12,16 @@
       <br>
       <br>
       <br>
-      <textarea type="text" class="timerInput" name = 'time3' id="timer3">0</textarea>
-      <textarea class="timerInput">h</textarea>
+      <textarea type="text" class="timerInput" name = 'time3' id="timer3"autofocus>0</textarea>
+      <!--<textarea  readonly id = "unit" class="timerInput">h</textarea>-->
       <textarea type="text" maxlength="2" class="timerInput" name = 'time2' id="timer2">0</textarea>
+      <!--<textarea  readonly id = "unit" class="timerInput">min</textarea>-->
       <textarea type="text" maxlength="2" class="timerInput" name = 'time1' id="timer1">0</textarea>
+         <!--<textarea  readonly id = "unit" class="timerInput">sec</textarea>-->
       <br>
     <button id="button" onclick="start()">Start</button>
+    <br>
+    <button id="button" onclick = "location.reload(true)">Reset</button>
   </center>
   </body>
 </html>

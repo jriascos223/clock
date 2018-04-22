@@ -22,9 +22,7 @@ function start() {
 	if(time3 === 'NaN'){
 		time3 = 0;
 	}
-	console.log('time1 ='+time1);
-  console.log('time2 ='+time2);
-  console.log('time3 ='+time3);
+	console.log(time1);
 	var audio = new Audio('sounds/alarm.mp3');
 	var btn = document.getElementById('button');
 	btn.disabled = true;
@@ -35,19 +33,12 @@ function start() {
 	function timer() {
 		time1 = time1 - 1;
 		if(time1 < 0 && time2 > 0){
-      console.log("1");
 			time2 = time2 -1;
 			time1 = 59;
 		}
-    if(time1 < 0 && time2 === 0 && time3 > 0) {
-      console.log("2");
-      time3 = time3 -1;
-      time2 = 59;
-      time1 = 59;
-    }
-		document.getElementById('timer1').value = time1;
-		document.getElementById('timer2').value = time2;
-		document.getElementById('timer3').value = time3;
+		document.getElementById('timer1').value = time1 + " sec";
+		document.getElementById('timer2').value = time2 + " min";
+		document.getElementById('timer3').value = time3 + " hr";
 
 		if (time1 == 0  && time2 == 0 && time3 == 0) {
 			clearInterval(myVar);

@@ -1,3 +1,4 @@
+
 *{
   font-family: sans-serif;
 }
@@ -38,6 +39,11 @@ p {
 .timerInput {
     resize: none;
     height: 50px;
-    width: 70px;
+    width: 200px;
     font-size: 40px;
+    text-align: center;
+}
+
+#unit{
+border : none;
 }
