@@ -1,7 +1,43 @@
+*{
+  font-family: sans-serif;
+}
 .timer{
   border: 1px solid black;
   height: 100px;
   width: 500px;
   font-size: 30px;
   text-align: center;
+}
+
+#time {
+  width:35%;
+  text-align:center;
+  background-color:grey;
+  color:white;
+  margin-left:50%;
+  transform:translate(-50%);
+  margin-top:5px;
+  font-family:"Do Hyeon";
+  font-size:50px;
+}
+
+#location, #message {
+  text-align:center;
+}
+
+p {
+  text-align:center;
+}
+
+#buttons {
+  text-align:center;
+  margin:auto;
+  width:auto;
+}
+
+.timerInput {
+    resize: none;
+    height: 50px;
+    width: 70px;
+    font-size: 40px;
 }

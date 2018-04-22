@@ -3,18 +3,18 @@
     <title>Timer</title>
     <link rel="stylesheet" href="index.css">
     <script type="text/javascript" src="timer.js"></script>
+    <script type="text/javascript" src="time.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
   </head>
   <body>
-    <h1>Timer</h1>
-    <hr>
-    <center>
-      <br>
-      <br>
-      <br>
-    <div class="timer">
-      <h3 id="timer">30</h3>
+
+    <h2 id = "message"></h2>
+    <div id = "time"></div>
+    <p>Tell me the time in...</p>
+    <div id = "buttons">
+      <button onclick = "displayTime(-7, true, 'Los Angeles')">Los Angeles</button>
+    <button onclick = "displayTime(2, true, 'Paris')">Paris</button>
+    <button onclick = "displayTime(3, true, 'Moscow')">Moscow</button>
     </div>
-    <button id="button" onclick="start()">Start</button>
-  </center>
   </body>
 </html>
