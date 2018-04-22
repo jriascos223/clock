@@ -35,7 +35,76 @@ p {
   margin:auto;
   width:auto;
 }
+#hours, #minutes, #relativenoon{
+  display:inline-block;
+  width:33%;
+  background-color:grey;
+  color:white;
+  font-size:20px;
+  text-align:center;
+  outline:none;
+  padding-bottom:2px;
+  float:left;
+  padding:none;
+  margin:auto;
+}
 
+#row1 {
+  width:50%;
+  display:inline-block;
+  margin-left:50%;
+  transform:translate(-50%);
+}
+
+#row1 select option, #row1 select {
+  text-align-last:center;
+}
+
+#submit {
+  margin-top:3px;
+}
+
+#buttonContainer {
+  width:50%;
+  display:inline-block;
+  text-align:center;
+  margin-left:50%;
+  transform:translate(-50%);
+}
+
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2F3061;
+}
+
+ul.nav li a {
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+}
+
+li {
+ float:left;
+}
+
+body {
+ margin:0;
+ padding:0;
+}
+
+ul.nav li a:hover:not(.selected) {
+   background-color: #111;
+   transition:0.5s;
+}
+
+.selected {
+  background-color:grey;
+}
 .timerInput {
     resize: none;
     height: 50px;
@@ -47,3 +116,4 @@ p {
 #unit{
 border : none;
 }
+
