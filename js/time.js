@@ -2,6 +2,7 @@ var timeouts = [];
 var currentZone;
 window.onload = function calcTime() {
   displayTime();
+  chooseMOTD();
 };
 //oval code is the entire file pretty much
 
