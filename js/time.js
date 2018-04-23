@@ -7,21 +7,7 @@ window.onload = function calcTime() {
 function displayTime(diff, clear, location) {
   document.getElementById('message').innerHTML = "The current time in your location is...";
   if (clear == true) {
-    //literally searches all timeouts in the file and exterminates them
-    //ended up finding this online cause I just couldn't clear the timeouts I had
-    let id = window.setTimeout(() => { }, 0);
-    console.log(id);
-    while (id) {
-      window.clearTimeout(id);
-      id--;
-    }
-
-    id = window.setInterval(() => { }, 0);
-    console.log(id);
-    while (id) {
-      window.clearInterval(id);
-      id--;
-    }
+    clearWorldwideInterval();
   }
   timeouts.push(setTimeout(function getTime() {
     if (diff == undefined) {
@@ -76,4 +62,22 @@ function displayTime(diff, clear, location) {
     }
 
   }, 10));
+}
+
+function clearWorldwideInterval() {
+  //literally searches all timeouts in the file and exterminates them
+    //ended up finding this online cause I just couldn't clear the timeouts I had
+    let id = window.setTimeout(() => { }, 0);
+    console.log(id);
+    while (id) {
+      window.clearTimeout(id);
+      id--;
+    }
+
+    id = window.setInterval(() => { }, 0);
+    console.log(id);
+    while (id) {
+      window.clearInterval(id);
+      id--;
+    }
 }
