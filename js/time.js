@@ -3,25 +3,12 @@ var currentZone;
 window.onload = function calcTime() {
   displayTime();
 };
+//oval code is the entire file pretty much
 
 function displayTime(diff, clear, location) {
   document.getElementById('message').innerHTML = "The current time in your location is...";
   if (clear == true) {
-    //literally searches all timeouts in the file and exterminates them
-    //ended up finding this online cause I just couldn't clear the timeouts I had
-    let id = window.setTimeout(() => { }, 0);
-    console.log(id);
-    while (id) {
-      window.clearTimeout(id);
-      id--;
-    }
-
-    id = window.setInterval(() => { }, 0);
-    console.log(id);
-    while (id) {
-      window.clearInterval(id);
-      id--;
-    }
+    clearWorldwideIntervals();
   }
   timeouts.push(setTimeout(function getTime() {
     if (diff == undefined) {
@@ -46,6 +33,11 @@ function displayTime(diff, clear, location) {
         minutes = "0" + minutes.toString();
       }
       document.getElementById("time").innerHTML = outputHour + ":" + minutes + ":" + seconds + " " + relativeNoon;
+      if (location == undefined) {
+        document.getElementById("message").innerHTML = "The current time in your location is...";
+      }else {
+        document.getElementById("message").innerHTML = "The current time in " + location + " is...";
+      }
       setTimeout(getTime, 10);
     } else {
       var hour = new Date().getUTCHours();
@@ -72,8 +64,31 @@ function displayTime(diff, clear, location) {
       }
 
       document.getElementById("time").innerHTML = outputHour + ":" + minutes + ":" + seconds + " " + relativeNoon;
+      if (location == undefined) {
+        document.getElementById("message").innerHTML = "The current time in your location is...";
+      }else {
+        document.getElementById("message").innerHTML = "The current time in " + location + " is...";
+      }
       setTimeout(getTime, 10);
     }
 
   }, 10));
+}
+
+function clearWorldwideIntervals() {
+  //literally searches all timeouts in the file and exterminates them
+    //ended up finding this online cause I just couldn't clear the timeouts I had
+    let id = window.setTimeout(() => { }, 0);
+    console.log(id);
+    while (id) {
+      window.clearTimeout(id);
+      id--;
+    }
+
+    id = window.setInterval(() => { }, 0);
+    console.log(id);
+    while (id) {
+      window.clearInterval(id);
+      id--;
+    }
 }
