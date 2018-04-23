@@ -125,3 +125,6 @@ ul.nav li a:hover:not(.selected) {
 border : none;
 }
 
+.stopwatch{
+  width: 50%;
+}
