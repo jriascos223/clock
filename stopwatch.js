@@ -5,14 +5,27 @@ var time4 = 0;
 var time5 = 0;
 var time6 = 0;
 var togle = "true";
+var button = document.getElementById('button');
 function start(){
-  var myVar = setInterval(stopwatch, 1000);
+  var stopRun = setInterval(stopwatch, 1000);
   if (togle === "true") {
     togle = "false";
+    document.getElementById('button').innerHTML = 'Stop'
     console.log('test');
   }else{
-    clearInterval(myVar);
+    let id = window.setTimeout(() => { }, 0);
+    while (id) {
+      window.clearTimeout(id);
+      id--;
+    }
+
+    id = window.setInterval(() => { }, 0);
+    while (id) {
+      window.clearInterval(id);
+      id--;
+    }
     togle = "true";
+    document.getElementById('button').innerHTML = 'Start'
     console.log('test2');
   }
 
@@ -21,9 +34,6 @@ function start(){
   function stopwatch(){
 
     time1 += 1;
-    if (time1 === 30) {
-    clearInterval(myVar);
-    }
     clock();
     display(time1,time2,time3,time4,time5);document.getElementById('stopwatch').innerHTML = time5 + ":" + time4 + time3 +":" + time2 + time1;
 
