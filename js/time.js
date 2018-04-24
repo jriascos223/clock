@@ -93,3 +93,10 @@ function clearWorldwideIntervals() {
       id--;
     }
 }
+
+function chooseMOTD() {
+  var messages = ["Welcome!", "Keep it up fella!", "What if you were rich? Think about that.", "Stay positive.", "I don't think this is productive.", "Treat yourself to some ice cream.",
+  "Take a break!", "You actually took the time to read this."];
+  var index = Math.floor(Math.random()*((messages.length - 1)-0+1)+0);
+  document.getElementById("MOTD").innerHTML = messages[index];
+}
