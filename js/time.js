@@ -12,6 +12,11 @@ function displayTime(diff, clear, location) {
   if (clear == true) {
     clearWorldwideIntervals();
   }
+  if (location == "default") {
+    document.getElementById("worldClock").className = "worldClock";
+  }else {
+    document.getElementById('worldClock').className = "paris";
+  }
   timeouts.push(setTimeout(function getTime() {
     if (diff == undefined) {
 
@@ -116,7 +121,7 @@ function clearWorldwideIntervals() {
 
 function chooseMOTD() {
   var messages = ["Welcome!", "Keep it up fella!", "What if you were rich? Think about that.", "Stay positive.", "I don't think this is productive.", "Treat yourself to some ice cream.",
-  "Take a break!", "You actually took the time to read this."];
+  "Take a break!", "You actually took the time to read this.", "Is your work really that important?"];
   var index = Math.floor(Math.random()*((messages.length - 1)-0+1)+0);
   document.getElementById("MOTD").innerHTML = messages[index];
 }

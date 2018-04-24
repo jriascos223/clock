@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
 </head>
 
-<body>
+<body class = "worldClock">
     <ul class="nav">
         <li>
           <a href="alarm.html">Alarm</a>
@@ -22,7 +22,7 @@
   <marquee id = "MOTD" scrollamount = "3" onmouseover = "this.stop();" onmouseout = "this.start();"></marquee>
   <h2 id="message"></h2>
   <div id="time"></div> <br>
-  <button  style = "margin-left:50%; transform:translate(-50%);" onclick = "displayTime(undefined, true)">Your Time</button>
+  <button  style = "margin-left:50%; transform:translate(-50%);" onclick = "displayTime(undefined, true, 'default')">Your Time</button>
   <p>Tell me the time in...</p>
   <div id="buttons">
     <button onclick="displayTime(-7, true, 'Los Angeles')">Los Angeles</button>
