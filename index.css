@@ -129,8 +129,69 @@ border : none;
 .worldClock {
   background-image: url(images/background1.png);
   color:white;
+  background-size:cover;
+  text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
 }
 
-.paris {
+.Paris {
   background-image: url(images/background2.jpg);
+  background-size:cover;
+  color:white;
+  text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.LosAngeles {
+  background-image: url(images/background3.jpg);
+}
+
+.Moscow {
+  background-image: url(images/background4.jpg);
+  background-size:cover;
+  color:white;
+  text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.London {
+  background-image: url(images/background5.jpg);
+  color:white;
+  background-size:cover;
+  text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.Tokyo {
+  background-image: url(images/background6.jpg);
+  color:white;
+  background-size:cover;
+  text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.Rome {
+  background-image: url(images/background7.jpg);
+  color:white;
+  background-size:cover;
+  text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
 }

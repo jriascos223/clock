@@ -2,20 +2,21 @@ var timeouts = [];
 var currentZone;
 var hour, minutes, seconds, outputHour,relativeNoon;
 window.onload = function calcTime() {
-  displayTime();
+  displayTime(undefined, true, "default");
   chooseMOTD();
 };
 //oval code is the entire file pretty much
 
 function displayTime(diff, clear, location) {
+  var place = location.replace(/\s/g, "");
   document.getElementById('message').innerHTML = "The current time in your location is...";
   if (clear == true) {
     clearWorldwideIntervals();
   }
   if (location == "default") {
-    document.getElementById("worldClock").className = "worldClock";
+    document.getElementById("world").className = "worldClock";
   }else {
-    document.getElementById('worldClock').className = "paris";
+    document.getElementById('world').className = place;
   }
   timeouts.push(setTimeout(function getTime() {
     if (diff == undefined) {
@@ -51,7 +52,7 @@ function displayTime(diff, clear, location) {
         minutes = "0" + minutes.toString();
       }
       document.getElementById("time").innerHTML = outputHour + ":" + minutes + ":" + seconds + " " + relativeNoon;
-      if (location == undefined) {
+      if (location == undefined || location == "default") {
         document.getElementById("message").innerHTML = "The current time in your location is...";
       }else {
         document.getElementById("message").innerHTML = "The current time in " + location + " is...";
