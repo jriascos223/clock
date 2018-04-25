@@ -35,7 +35,7 @@ function start(){
 
     time1 += 1;
     clock();
-    display(time1,time2,time3,time4,time5);
+    display(time1,time2,time3,time4,time5);document.getElementById('stopwatch').innerHTML = time5 + ":" + time4 + time3 +":" + time2 + time1;
 
 
     function clock(){
@@ -66,7 +66,7 @@ function start(){
 
 
   function display(time1,time2,time3,time4,time5){
-  document.getElementById('time').innerHTML = time5 + ":" + time4 + time3 +":" + time2 + time1;
+  document.getElementById('stopwatch').innerHTML = time5 + ":" + time4 + time3 +":" + time2 + time1;
   }
 
 
