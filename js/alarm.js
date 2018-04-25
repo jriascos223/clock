@@ -1,4 +1,10 @@
 var alarms = [];
+var timeouts = [];
+var hour, minutes, seconds, outputHour,relativeNoon;
+
+window.onload = function start() {
+    lightTime(undefined, true);
+}
 document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById("submit").addEventListener("click", function (event) {
         var hours = document.getElementById("hours").value;
@@ -78,4 +84,44 @@ function handleAudio(number) {
     audio.play();
     console.log('audio played.');
 }
+
+function lightTime() {
+    document.getElementById('message').innerHTML = "The current time in your location is...";
+    timeouts.push(setTimeout(function getTime() {
+        hour = new Date().getHours();
+        minutes = new Date().getMinutes();
+        seconds = new Date().getSeconds();
+        outputHour = hour;
+        var numberOfTimes = 0;
+        relativeNoon = "AM";
+        while (outputHour > 12) {
+          outputHour = outputHour - 12;
+          numberOfTimes++;
+        }
+        while (outputHour == 0) {
+          outputHour = 12;
+  
+        }
+        while (outputHour < 0) {
+          outputHour += 12;
+          numberOfTimes++;
+        }
+        
+        if (numberOfTimes % 2 == 0) {
+          relativeNoon = "AM";
+        }else {
+          relativeNoon = "PM";
+        }
+        if (seconds.toString().length == 1) {
+          seconds = "0" + seconds.toString();
+        }
+        if (minutes.toString().length == 1) {
+          minutes = "0" + minutes.toString();
+        }
+        document.getElementById("time").innerHTML = outputHour + ":" + minutes + ":" + seconds + " " + relativeNoon;
+          document.getElementById("message").innerHTML = "The current time in your location is...";
+        setTimeout(getTime, 10);
+  
+    }, 10));
+  }
 
