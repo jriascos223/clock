@@ -195,3 +195,18 @@ border : none;
         -0.07em 0 black,
         0 -0.07em black;
 }
+
+#stopwatch {
+  width:50%;
+  text-align:center;
+  background-color:#2D8DC3;
+  color:white;
+  margin-left:50%;
+  transform:translate(-50%);
+  margin-top:5px;
+  font-family:"Do Hyeon";
+  font-size:50px;
+  box-sizing:border-box;
+  border:3px solid black;
+  border-radius:5px;
+}
