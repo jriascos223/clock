@@ -129,6 +129,32 @@ ul.nav li a:hover:not(.selected) {
     text-align: center;
 }
 
+.myButton {
+	background-color:#599bb3;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	outline:none;
+	border-radius:28px;
+	border:1px solid #29668f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:8px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+	outline:none;
+}
+
+
 #unit{
 border : none;
 }
