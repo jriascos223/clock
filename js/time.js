@@ -121,8 +121,8 @@ function clearWorldwideIntervals() {
 }
 
 function chooseMOTD() {
-  var messages = ["Welcome!", "Keep it up fella!", "What if you were rich? Think about that.", "Stay positive.", "I don't think this is productive.", "Treat yourself to some ice cream.",
-  "Take a break!", "You actually took the time to read this.", "Is your work really that important?"];
+  var messages = ["Welcome!", "Keep it up fella!", "What if you were rich? Think about that.", "Stay positive.", "Treat yourself to some ice cream.",
+  "Take a break!", "Hope your day goes great!"];
   var index = Math.floor(Math.random()*((messages.length - 1)-0+1)+0);
   document.getElementById("MOTD").innerHTML = messages[index];
 }
