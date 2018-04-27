@@ -37,7 +37,6 @@ function start() {
 			time1 = 59;
 		}
 		if (time1 < 0 && time2 === 0 && time3 > 0) {
-			console.log('hour')
 			time1 = 59;
 			time2 = 59;
 			time3 = time3 -1
