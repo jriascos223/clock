@@ -22,6 +22,9 @@ function start() {
 	if(time3 === 'NaN'){
 		time3 = 0;
 	}
+	if ((time1 === 0 && time2 === 0 && time3 ===0) || isNaN(time1) || isNaN(time2) || isNaN(time3)) {
+		alert("Please enter a valid number");
+	}else{
 	console.log(time1);
 	var audio = new Audio('sounds/alarm.mp3');
 	var btn = document.getElementById('button');
@@ -52,4 +55,5 @@ function start() {
 			btn.disabled = false;
 		}
 	}
+}
 }
