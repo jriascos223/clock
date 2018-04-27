@@ -241,3 +241,24 @@ border : none;
 #stopwatch {
   margin-bottom:5px;
 }
+
+  #button {
+    outline: none;
+	background-color:#2D8DC3;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #2D8DC3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+  font-family:"Do Hyeon";
+	font-size:17px;
+	padding:16px 33px;
+	text-decoration:none;
+}
+
+#button:active {
+	position:relative;
+	top:3px;
+}
