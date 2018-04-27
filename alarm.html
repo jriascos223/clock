@@ -16,6 +16,7 @@
   <audio id="audio1" src="sounds/alarm1.mp3"></audio>
   <audio id="audio2" src="sounds/shipbell.mp3"></audio>
   <audio id="audio3" src="sounds/storedoorchime.mp3"></audio>
+  <audio id = "audio4" src = "sounds/military.mp3"></audio>
   <h2 id="message"></h2>
   <div id="time"></div>
   <h3 style="text-align:center">Enter your desired time:</h3>
@@ -105,8 +106,8 @@
     </select>
     </br>
     <div id="buttonContainer">
-      <button id="submit">Set Alarm</button>
-      <button id="stop">Stop Alarm</button>
+      <button id="submit" style = "margin:3px;"class = "myButton">Set Alarm</button>
+      <button id="stop" class = "myButton">Stop Alarm</button>
       <div id="currentAlarm">Your current alarm is for: </div>
       <br>
       <select id="sound">
@@ -114,6 +115,7 @@
         <option value="1">Normal Alarm</option>
         <option value="2">Ship Bell</option>
         <option value="3">Store Door Chime</option>
+        <option value = "4">Military Chime</option>
       </select>
     </div>
   </div>
